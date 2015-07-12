@@ -85,17 +85,14 @@ body {
     background-color:#b7c9bb;
     border:1px solid #b7c9bb;
 }
-/*#myButton2:hover {
-    background-color:#5ffc3c;
-    border:1px solid #5ffc3c;
-}
-#myButton3:hover {
-    background-color:#b54b3a;
-    border:1px solid #b54b3a;
-}*/
 .myButton:active {
     position:relative;
     top:1px;
+}
+#conf {
+    position: absolute;
+    margin-left: 116px;
+    margin-top: 3px;
 }
 
 </style>
@@ -107,6 +104,7 @@ body {
  <div class="login-card">
     <form method="post" action="">{% csrf_token %}
     <h1>CONTROL REMOTO PLANTA TRANSMISORA</h1>
+    <h2>{{ planta }}</h2>
     {% if estado == 1 %} <!-- prendido -->
         <h2 class="flash">¡Transmisor energizado! </h2>	
         <p><input class="myButton" id="estadoP" name="action1" value="ON" type="submit"/> 
@@ -121,7 +119,8 @@ body {
         <p><input class="myButton" id="blink" name="action2" value="OFF" type="submit"/>
         APAGAR</p>
     {% endif %}
-
+    <br>
+    <input id="conf" name="action3" value="Configuracion" type="submit"/>
     </form>
     
 </div>

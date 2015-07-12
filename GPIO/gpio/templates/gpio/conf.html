@@ -2,7 +2,7 @@
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>Log-in</title>
+    <title>Configuracion</title>
     <style>
 
 body {
@@ -100,13 +100,17 @@ body {
   <body>
     <div id="espacio"> </div>
     <div class="login-card">
-   <form action="/login/" method="post">
+   <form action="/conf/" method="post">
     {% if state %}
         <p>{{ state }}<p/>
-    {% endif %}
-    <input type="text" name="username" placeholder="Username"  value="{{ username}}" />
-    <input type="password" name="password" placeholder="Password" value="" />
-    <input type="submit" name="login" class="login login-submit" value="Login In">
+    {% endif %}<br>
+    <input type="checkbox" name="vehicle" value="nom">Nombre de la planta:<br>
+    <input type="text" name="Nplanta" placeholder="Nombre de la planta"  value="{{ planta }}" /><br>
+    <input type="checkbox" name="vehicle" value="pass">Nueva Password<br>
+    <input type="password" name="Ppassword" placeholder="Nuevo Password" value="" /><br><br>
+    Ingrese Password Actual:
+    <input type="password" name="Apassword" placeholder="Password Actual" value="" />
+    <input type="submit" name="login" class="login login-submit" value="Ejecutar/Salir">
   </form>
   
   <div class="login-help">
