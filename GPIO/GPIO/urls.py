@@ -17,14 +17,14 @@ Including another URLconf
 #from django.conf.urls import include, url
 #from django.contrib import admin
 from django.conf.urls import patterns, include, url
-#from django.contrib import admin
+from django.contrib import admin
 
 urlpatterns = patterns('',
-    #url(r'^admin/', include(admin.site.urls)),
-    url(r'^', include('gpio.urls')),
+    url(r'^admin/', include(admin.site.urls)),
+    #url(r'^', include('gpio.urls')),
     url(r'^gpio/', include('gpio.urls')),
     url(r'^login/$', 'gpio.views.login_user'),
     url(r'^conf/$', 'gpio.views.conf_user'),
-    url('^.*/$', include('gpio.urls')),
+    #url('^.*/$', include('gpio.urls')),
 
 )

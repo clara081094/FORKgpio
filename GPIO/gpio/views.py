@@ -52,7 +52,7 @@ def index(request):
     #GPIO.setwarnings(False)
     #GPIO.setmode(GPIO.BOARD)
     #GPIO.setup(13, GPIO.OUT)
-    #GPIO.setup(15, GPIO.OUT)
+    #GPIO.setup(18, GPIO.OUT)
     #GPIO.setup(16, GPIO.IN)
     #estado = GPIO.input(16) # 0 --> prendido #ACA LEEE
     estado=0
@@ -102,18 +102,19 @@ def conf_user(request):
 
 def encender():
     print("encendiendo")
-    #GPIO.setmode(GPIO.BOARD)
+   # GPIO.setmode(GPIO.BOARD)
+    
     #GPIO.setup(13,GPIO.OUT)
     #GPIO.output(13,True)
-    time.sleep(1) 
+    #time.sleep(1) 
     #GPIO.output(13,False)
 	
 def apagar():
     print("apagando")
     #GPIO.setmode(GPIO.BOARD)
-    #GPIO.setup(15,GPIO.OUT)
-    #GPIO.output(15,True)
-    time.sleep(1) 
-    #GPIO.output(15,False)
+    #GPIO.setup(18,GPIO.OUT)
+    #GPIO.output(18,True)
+    #time.sleep(1) 
+    #GPIO.output(18,False)
 	
     
