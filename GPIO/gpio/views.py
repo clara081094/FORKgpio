@@ -52,9 +52,8 @@ def index(request):
     #GPIO.setwarnings(False)
     #GPIO.setmode(GPIO.BOARD)
     #GPIO.setup(13, GPIO.OUT)
-    #GPIO.setup(18, GPIO.OUT)
-    #GPIO.setup(16, GPIO.IN)
-    #estado = GPIO.input(16) # 0 --> prendido #ACA LEEE
+    #GPIO.setup(18, GPIO.IN)
+    #estado = GPIO.input(18) # 0 --> prendido #ACA LEEE
     estado=0
     planta=Nombre.objects.get(pk=1)
     return render_to_response('gpio/indexCalc.html',
@@ -106,15 +105,12 @@ def encender():
     
     #GPIO.setup(13,GPIO.OUT)
     #GPIO.output(13,True)
-    #time.sleep(1) 
-    #GPIO.output(13,False)
 	
 def apagar():
     print("apagando")
     #GPIO.setmode(GPIO.BOARD)
-    #GPIO.setup(18,GPIO.OUT)
-    #GPIO.output(18,True)
-    #time.sleep(1) 
-    #GPIO.output(18,False)
+    
+    #GPIO.setup(13,GPIO.OUT)
+    #GPIO.output(13,False)
 	
     
